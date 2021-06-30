@@ -5,6 +5,5 @@
 
 	<bean id="employee" class="com.cg.spring.demo.Employee">
 	</bean>
-
 </beans>
 
