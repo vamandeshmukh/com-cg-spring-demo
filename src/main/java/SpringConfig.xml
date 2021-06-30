@@ -25,9 +25,14 @@
 	<!-- Constructor injection -->
 
 	<bean id="employee3" class="com.cg.spring.demo.Employee">
-
+		<constructor-arg value="Sonu" type="String"></constructor-arg>
 	</bean>
 
+	<bean id="employee4" class="com.cg.spring.demo.Employee">
+		<constructor-arg value="101" type="int"></constructor-arg>
+		<constructor-arg value="Monu" type="String"></constructor-arg>
+		<constructor-arg value="10.5" type="double"></constructor-arg>
+	</bean>
 
 </beans>
 
