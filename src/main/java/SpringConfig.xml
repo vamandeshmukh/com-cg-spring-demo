@@ -11,5 +11,10 @@
 		</property>
 	</bean>
 
+	<bean id="employee2" class="com.cg.spring.demo.Employee">
+		<property name="ename">
+			<value>Suresh Reddy</value>
+		</property>
+	</bean>
 </beans>
 
