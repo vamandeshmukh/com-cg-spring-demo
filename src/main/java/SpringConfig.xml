@@ -3,10 +3,13 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
  http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
+	<!-- This is a comment. -->
+
 	<!-- bean definition -->
 	<!-- <bean id="employee" class="com.cg.spring.demo.Employee"> </bean> -->
 
 	<!-- Property injection / Setter injection -->
+
 	<bean id="employee" class="com.cg.spring.demo.Employee">
 		<property name="ename">
 			<value>Vaman Deshmukh</value>
@@ -22,6 +25,7 @@
 	<!-- Constructor injection -->
 
 	<bean id="employee3" class="com.cg.spring.demo.Employee">
+
 	</bean>
 
 
