@@ -4,7 +4,9 @@
  http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
 	<!-- bean definition -->
+	<!-- <bean id="employee" class="com.cg.spring.demo.Employee"> </bean> -->
 
+	<!-- Property injection / Setter injection -->
 	<bean id="employee" class="com.cg.spring.demo.Employee">
 		<property name="ename">
 			<value>Vaman Deshmukh</value>
@@ -16,5 +18,12 @@
 			<value>Suresh Reddy</value>
 		</property>
 	</bean>
+
+	<!-- Constructor injection -->
+
+	<bean id="employee3" class="com.cg.spring.demo.Employee">
+	</bean>
+
+
 </beans>
 
