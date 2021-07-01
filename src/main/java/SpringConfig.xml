@@ -4,7 +4,6 @@
  http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
 	<!-- This is a comment. -->
-
 	<!-- bean definition -->
 	<!-- <bean id="employee" class="com.cg.spring.demo.Employee"> </bean> -->
 
@@ -63,6 +62,38 @@
 		</property>
 	</bean>
 
+	<!-- Inner bean - using constructor injection -->
+	<bean id="employee6" class="com.cg.spring.demo.Employee">
+		<constructor-arg value="106" type="int"></constructor-arg>
+		<constructor-arg value="Tanmay"
+			type="java.lang.String"></constructor-arg>
+		<constructor-arg value="10.6" type="double"></constructor-arg>
+		<constructor-arg type="com.cg.spring.demo.Department">
+			<bean id="dept" class="com.cg.spring.demo.Department">
+				<constructor-arg value="20" type="int"></constructor-arg>
+				<constructor-arg value="Sales"
+					type="java.lang.String"></constructor-arg>
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<!-- Collection injection - using property injection -->
+	<bean id="department3" class="com.cg.spring.demo.Department">
+		<property name="id">
+			<value>30</value>
+		</property>
+		<property name="name">
+			<value>Admin</value>
+		</property>
+		<property name="functions">
+			<list>
+				<value>Payroll</value>
+				<value>Security</value>
+				<value>Admin</value>
+				<value>Engagement</value>
+			</list>
+		</property>
+	</bean>
 
 </beans>
 

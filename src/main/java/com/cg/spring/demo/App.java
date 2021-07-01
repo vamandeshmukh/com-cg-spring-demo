@@ -31,6 +31,12 @@ public class App {
 		Employee emp5 = context.getBean("employee5", Employee.class);
 		System.out.println(emp5.toString());
 
+		Employee emp6 = context.getBean("employee6", Employee.class);
+		System.out.println(emp6.toString());
+
+		Department dept3 = context.getBean("department3", Department.class);
+		System.out.println(dept3.toString());
+
 		System.out.println("End");
 		((AbstractApplicationContext) context).close();
 	}
