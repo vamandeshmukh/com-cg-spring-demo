@@ -17,8 +17,14 @@
 	</bean>
 
 	<bean id="employee2" class="com.cg.spring.demo.Employee">
+		<property name="eid">
+			<value>102</value>
+		</property>
 		<property name="ename">
 			<value>Suresh Reddy</value>
+		</property>
+		<property name="salary">
+			<value>10.75</value>
 		</property>
 	</bean>
 

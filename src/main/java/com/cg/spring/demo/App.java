@@ -17,10 +17,10 @@ public class App {
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
 		Employee emp = context.getBean("employee", Employee.class);
 		emp.work();
-		System.out.println(emp.getEname());
+		System.out.println(emp.toString());
 
 		Employee emp2 = context.getBean("employee2", Employee.class);
-		System.out.println(emp2.getEname());
+		System.out.println(emp2.toString());
 
 		Employee emp3 = context.getBean("employee3", Employee.class);
 		System.out.println(emp3.toString());
