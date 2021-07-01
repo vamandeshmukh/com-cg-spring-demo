@@ -28,6 +28,9 @@ public class App {
 		Employee emp4 = context.getBean("employee4", Employee.class);
 		System.out.println(emp4.toString());
 
+		Employee emp5 = context.getBean("employee5", Employee.class);
+		System.out.println(emp5.toString());
+
 		System.out.println("End");
 		((AbstractApplicationContext) context).close();
 	}

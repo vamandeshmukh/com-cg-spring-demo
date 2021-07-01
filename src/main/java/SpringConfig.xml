@@ -31,14 +31,38 @@
 	<!-- Constructor injection -->
 
 	<bean id="employee3" class="com.cg.spring.demo.Employee">
-		<constructor-arg value="Sonu" type="String"></constructor-arg>
+		<constructor-arg value="Sonu" type="java.lang.String"></constructor-arg>
 	</bean>
 
 	<bean id="employee4" class="com.cg.spring.demo.Employee">
 		<constructor-arg value="101" type="int"></constructor-arg>
-		<constructor-arg value="Monu" type="String"></constructor-arg>
+		<constructor-arg value="Monu" type="java.lang.String"></constructor-arg>
 		<constructor-arg value="10.5" type="double"></constructor-arg>
 	</bean>
+
+	<!-- Inner bean - using property injection -->
+	<bean id="employee5" class="com.cg.spring.demo.Employee">
+		<property name="eid">
+			<value>105</value>
+		</property>
+		<property name="ename">
+			<value>Aaa Aaa</value>
+		</property>
+		<property name="salary">
+			<value>20.45</value>
+		</property>
+		<property name="department">
+			<bean id="dept" class="com.cg.spring.demo.Department">
+				<property name="id">
+					<value>10</value>
+				</property>
+				<property name="name">
+					<value>HR</value>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
 
 </beans>
 
