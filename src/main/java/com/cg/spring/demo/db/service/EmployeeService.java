@@ -12,12 +12,10 @@ public class EmployeeService {
 	@Autowired
 	EmployeeRepository repository;
 
+	// select one employee
 	public Employee getEmployeebyId(int eid) {
-
-		repository.findById(eid);
-
-		return null;
-
+		return repository.findById(eid).get();
 	}
 
+	// write methods to select many, insert, update, delete
 }

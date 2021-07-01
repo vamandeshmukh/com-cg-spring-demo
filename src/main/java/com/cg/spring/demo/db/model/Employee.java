@@ -7,12 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.stereotype.Component;
-
 @Entity
 @Table(name = "spring_emp")
-@Component
-public class Employee { // entity classes
+public class Employee {
 
 	@Id // primary key
 	@Column
