@@ -1,7 +1,12 @@
 package com.cg.spring.demo.db.repository;
 
-public interface EmployeeRepository /* extends JpaRepository */ {
-	
-	// one or two methods 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
+
+import com.cg.spring.demo.db.model.Employee;
+
+@Repository
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 }
