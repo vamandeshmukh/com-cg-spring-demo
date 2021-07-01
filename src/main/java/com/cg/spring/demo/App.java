@@ -16,6 +16,7 @@ public class App {
 
 		System.out.println("Create spring container object");
 		ApplicationContext context = new ClassPathXmlApplicationContext("SpringConfig.xml");
+		ApplicationContext context2 = new ClassPathXmlApplicationContext("SpringConfig2.xml");
 
 		System.out.println("Property injection / Setter injection");
 		Employee emp = context.getBean("employee", Employee.class);
@@ -48,14 +49,12 @@ public class App {
 		Employee emp7 = context.getBean("employee7", Employee.class);
 		System.out.println(emp7.toString());
 
-//		System.out.println(" ");
-//		Employee emp8 = context.getBean("employee8", Employee.class);
-//		System.out.println(emp8.toString());
-
 		System.out.println("Autowiring using constructor injection");
-
 		Employee emp9 = context.getBean("employee9", Employee.class);
 		System.out.println(emp9.toString());
+
+		Employee emp10 = context.getBean("employee10", Employee.class);
+		System.out.println(emp10.toString());
 
 		((AbstractApplicationContext) context).close();
 
