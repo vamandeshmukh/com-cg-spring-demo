@@ -44,9 +44,18 @@ public class App {
 		Department dept3 = context.getBean("department3", Department.class);
 		System.out.println(dept3.toString());
 
-		System.out.println("Collection injection in inner bean - using constructor injection ");
+		System.out.println("Collection injection in inner bean - using constructor injection");
 		Employee emp7 = context.getBean("employee7", Employee.class);
 		System.out.println(emp7.toString());
+
+//		System.out.println(" ");
+//		Employee emp8 = context.getBean("employee8", Employee.class);
+//		System.out.println(emp8.toString());
+
+		System.out.println("Autowiring using constructor injection");
+
+		Employee emp9 = context.getBean("employee9", Employee.class);
+		System.out.println(emp9.toString());
 
 		((AbstractApplicationContext) context).close();
 
