@@ -14,11 +14,10 @@ public class App3 {
 
 		ApplicationContext context = new AnnotationConfigApplicationContext(App3.class);
 
-		Customer cust1 = context.getBean(Customer.class);
-		cust1.buy();
+		Customer obj = context.getBean(Customer.class);
+		obj.buy();
 
 		((AbstractApplicationContext) context).close();
 
 	}
-
 }

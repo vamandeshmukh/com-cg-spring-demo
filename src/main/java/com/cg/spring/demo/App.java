@@ -10,6 +10,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  *
  */
 
+// XML based Spring configuration 
+
 public class App {
 	public static void main(String[] args) {
 		System.out.println("Start");
