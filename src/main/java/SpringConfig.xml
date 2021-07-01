@@ -8,7 +8,6 @@
 	<!-- <bean id="employee" class="com.cg.spring.demo.Employee"> </bean> -->
 
 	<!-- Property injection / Setter injection -->
-
 	<bean id="employee" class="com.cg.spring.demo.Employee">
 		<property name="ename">
 			<value>Vaman Deshmukh</value>
@@ -28,7 +27,6 @@
 	</bean>
 
 	<!-- Constructor injection -->
-
 	<bean id="employee3" class="com.cg.spring.demo.Employee">
 		<constructor-arg value="Sonu" type="java.lang.String"></constructor-arg>
 	</bean>
@@ -93,6 +91,29 @@
 				<value>Engagement</value>
 			</list>
 		</property>
+	</bean>
+
+	<!-- Collection injection in inner bean - using constructor injection -->
+	<bean id="employee7" class="com.cg.spring.demo.Employee">
+		<constructor-arg value="107" type="int"></constructor-arg>
+		<constructor-arg value="Pratik"
+			type="java.lang.String"></constructor-arg>
+		<constructor-arg value="78.45" type="double"></constructor-arg>
+		<constructor-arg type="com.cg.spring.demo.Department">
+			<bean id="dept" class="com.cg.spring.demo.Department">
+				<constructor-arg value="20" type="int"></constructor-arg>
+				<constructor-arg value="Sales"
+					type="java.lang.String"></constructor-arg>
+				<constructor-arg>
+					<list>
+						<value>Market research</value>
+						<value>Promotion</value>
+						<value>Advertisements</value>
+						<value>Discount</value>
+					</list>
+				</constructor-arg>
+			</bean>
+		</constructor-arg>
 	</bean>
 
 </beans>
