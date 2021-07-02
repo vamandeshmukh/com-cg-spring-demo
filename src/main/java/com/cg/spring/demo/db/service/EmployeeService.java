@@ -12,11 +12,10 @@ import com.cg.spring.demo.db.repository.EmployeeRepository;
 public class EmployeeService {
 
 	@Autowired
-	EmployeeRepository repository;
+	private EmployeeRepository repository;
 
 	// select one employee
 	public Employee getEmployeebyId(int eid) {
-
 		return repository.findById(eid).get();
 
 	}
@@ -25,6 +24,8 @@ public class EmployeeService {
 
 	// select all employees
 	public List<Employee> getAllEmployees() {
+		
+
 		return repository.findAll();
 	}
 
