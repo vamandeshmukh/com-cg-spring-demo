@@ -9,8 +9,9 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 
 @Configuration
-@EnableJpaRepositories(basePackages = { "com.cg.spring.demo" })
+@EnableJpaRepositories(basePackages = { "com.cg.spring.demo.db" })
 public class Config {
+
 	@Bean
 	public LocalEntityManagerFactoryBean entityManagerFactory() {
 		LocalEntityManagerFactoryBean factoryBean = new LocalEntityManagerFactoryBean();

@@ -14,8 +14,9 @@ public class EmployeeService {
 
 	// select one employee
 	public Employee getEmployeebyId(int eid) {
+
 		return repository.findById(eid).get();
-//		return new Employee();
+
 	}
 
 	// write methods to select many, insert, update, delete
