@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Table(name = "spring_emp")
 public class Employee {
 
-	@Id // primary key
+	@Id
 	@Column
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int eid;

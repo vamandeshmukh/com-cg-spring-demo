@@ -1,12 +1,12 @@
 package com.cg.spring.demo.db.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import com.cg.spring.demo.db.model.Employee;
 import com.cg.spring.demo.db.repository.EmployeeRepository;
 
-@Service
+@Component
 public class EmployeeService {
 
 	@Autowired
@@ -15,6 +15,7 @@ public class EmployeeService {
 	// select one employee
 	public Employee getEmployeebyId(int eid) {
 		return repository.findById(eid).get();
+//		return new Employee();
 	}
 
 	// write methods to select many, insert, update, delete
